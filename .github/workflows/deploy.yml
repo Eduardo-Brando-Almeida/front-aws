@@ -246,7 +246,7 @@ jobs:
             # Verificar container existente
             CONTAINER_ID=$(docker ps -aq --filter "name=$REPO_NAME")
             if [ -n "$CONTAINER_ID" ]; then
-              echo "⚙️ Container atual em execução:"
+              echo "⚙️ Container atual em existente:"
               docker inspect --format='{{.Config.Image}}' $CONTAINER_ID
               echo "🛑 Parando e removendo container atual..."
               docker rm -f $REPO_NAME || true
